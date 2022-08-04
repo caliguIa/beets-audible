@@ -12,5 +12,5 @@ services:
       - ./plugins:/plugins
       - ./scripts:/config/custom-cont-init.d
       - /srv/dev-disk-by-uuid-e402302d-7f58-428d-8959-4d9dffa08ddb/audiobooks/audiobooks:/audiobooks
-      - /srv/dev-disk-by-uuid-e402302d-7f58-428d-8959-4d9dffa08ddb/audiobooks/untagged:/untagged
+      - /srv/dev-disk-by-uuid-e402302d-7f58-428d-8959-4d9dffa08ddb/audiobooks/temp/untagged:/untagged
     restart: unless-stopped
