@@ -50,7 +50,7 @@ scrub:
   auto: yes # optional, enabling this is personal preference
   
 plex:
-  host: localhost
+  host: 192.168.0.146
   port: 32400
-  token: xxxxxxxxxxxxxxxxxxxx # Your plex token
+  token: b7epdmbyZoFytFoxg_sZ # Your plex token
   library_name: Audiobooks # The name of your audiobook library in Plex
