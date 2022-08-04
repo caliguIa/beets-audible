@@ -4,14 +4,13 @@ services:
     image: lscr.io/linuxserver/beets:latest
     container_name: beets
     environment:
-      # Update as needed
       - PUID=1000
       - PGID=1000
-      - TZ=Asia/Singapore
+      - TZ=Europe/London
     volumes:
-      - ./config:/config
+      - /srv/dev-disk-by-uuid-e402302d-7f58-428d-8959-4d9dffa08ddb/config:/config
       - ./plugins:/plugins
       - ./scripts:/config/custom-cont-init.d
-      - /path/to/plex/audiobooks:/audiobooks
-      - /path/to/temp/untagged:/untagged
+      - /srv/dev-disk-by-uuid-e402302d-7f58-428d-8959-4d9dffa08ddb/audiobooks/audiobooks:/audiobooks
+      - /srv/dev-disk-by-uuid-e402302d-7f58-428d-8959-4d9dffa08ddb/audiobooks/untagged:/untagged
     restart: unless-stopped
