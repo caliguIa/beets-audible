@@ -8,9 +8,10 @@ services:
       - PGID=1000
       - TZ=Europe/London
     volumes:
-      - /srv/dev-disk-by-uuid-e402302d-7f58-428d-8959-4d9dffa08ddb/config:/config
-      - ./plugins:/plugins
-      - ./scripts:/config/custom-cont-init.d
+      - /srv/dev-disk-by-uuid-e402302d-7f58-428d-8959-4d9dffa08ddb/config/beets/config:/config
+      - /srv/dev-disk-by-uuid-e402302d-7f58-428d-8959-4d9dffa08ddb/config/beets/plugins:/plugins
+      - /srv/dev-disk-by-uuid-e402302d-7f58-428d-8959-4d9dffa08ddb/config/beets/scripts:/config/custom-cont-init.d
+      - /srv/dev-disk-by-uuid-e402302d-7f58-428d-8959-4d9dffa08ddb/config/beets/scripts:/scripts
       - /srv/dev-disk-by-uuid-e402302d-7f58-428d-8959-4d9dffa08ddb/audiobooks/audiobooks:/audiobooks
       - /srv/dev-disk-by-uuid-e402302d-7f58-428d-8959-4d9dffa08ddb/audiobooks/temp/untagged:/untagged
     restart: unless-stopped
